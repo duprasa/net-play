@@ -1,0 +1,3 @@
+run:
+	grub-terminal --command='nodejs source/start-server.js'
+

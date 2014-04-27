@@ -1,0 +1,309 @@
+/*GLOBAL*/
+html,body{
+	height: 100%;
+	overflow: hidden;
+	margin:0px;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none; /* Webkit */
+	-moz-user-select: none;    /* Firefox */
+	-ms-user-select: none;     /* IE 10  */
+	-o-user-select: none;
+}
+a{
+	color:#3366FF;
+}
+p{
+	margin:0px;
+	font-weight: normal;
+}
+h2{
+	font-size: 1em;
+	margin: 0px;
+	font-weight: bold;
+}
+.button{
+	color:black;
+	border:4px outset #D11919;
+	background-color:#D11919;
+	margin: 10px auto;
+	height: 40px;
+	font-size:30px;
+	text-align: center;
+	line-height:40px;
+	font-weight:bold;
+	cursor:pointer;
+	width:200px;
+	display: inline-block;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none; /* Webkit */
+	-moz-user-select: none;    /* Firefox */
+	-ms-user-select: none;     /* IE 10  */
+	-o-user-select: none;
+}
+.button:hover{
+	border:4px outset #BC1616;
+	background-color:#BC1616;
+}
+.button:active{
+	background-color:#9C0E0E;
+	border:4px inset #9C0E0E;
+}
+.bottom-bar-item{
+	display:inline;
+	margin: 20px;
+	cursor:pointer;
+}
+.bottom-bar-item:hover{
+	color:#A06B0E;
+}
+#bottom-bar{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+	height: 30px; 
+}
+#menu{
+	width: 300px;
+	margin: auto;
+}
+#button-back{
+	font-size:30px;
+	display: inline-block;
+	width: 100px;
+
+}
+.input{
+	height: 30px;
+	font-size: 20px;
+	margin:10px;
+}
+.horizontal-list{
+	list-style:none;
+	text-align:center;
+	margin: auto;
+	padding: 0px;
+	width: 1280px;
+}
+.error{
+	color:red;
+	background-color:rgba(0, 0, 0, 0.5);
+}
+.has-background{
+	background-color:rgba(0, 0, 0, 0.5);
+	border: 2px solid black;
+	padding: 10px;
+}
+/*index page*/
+#index{
+	font-family:"helvetica", sans-serif;
+	font-weight:bold;
+	background-image:url('../images/menubackground2.jpg');
+	color:#E49914;
+}
+#contents{
+	height: 100%;
+	width: 1280px;
+	margin: auto;
+}
+#main-content{
+	height: 60%;
+	width:400px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 70px;
+}
+#header{
+	height: 30%;
+	min-height: 260px;
+	text-align:center;
+}
+#title{
+	padding-top:100px;
+	margin: auto;
+	display: block;
+}
+#subtitle{
+	width:424px;
+	margin: auto;
+}
+#button-play{
+	font-size:40px;
+	border:4px outset #2EB82E;
+	height: 80px;
+	line-height:80px;
+	background-color:#2EB82E;
+}
+#button-play:hover{
+	border:4px outset #29A329;
+	background-color:#29A329;
+}
+#button-play:active{
+	border:4px inset #218221;
+	background-color:#218221;
+}
+#button-logIn{
+	border:4px outset #E68A00;
+	font-size:30px;
+	background-color:#E68A00;
+}
+#button-logIn:hover{
+	border:4px outset #CF7C00;
+	background-color:#CF7C00;
+}
+#button-logIn:active{
+	border:4px inset #A66300;
+	background-color:#A66300;
+}
+#button-register{
+	background-color:transparent;
+	border: none;
+	height: 10px;
+	line-height:10px;
+	font-size:14px;
+	color:#0099FF;
+}
+#button-register:hover{
+	color:#007ACC;
+}
+#button-register:active{
+	color:#0062A3;
+}
+#center-container{
+}
+
+/*login page*/
+#login{
+	width: 300px;
+	margin: auto;
+}
+#button-login-play{
+	border:4px outset #2EB82E;
+	background-color:#2EB82E;
+	display: inline-block;
+	font-size:30px;
+	width: 100px;
+}
+#button-login-play:hover{
+	border:4px outset #29A329;
+	background-color:#29A329;
+}
+#help-button{
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	cursor:pointer;
+	background-image:url('../images/help.png');
+	width:48px;
+	height:48px;
+	
+}
+#help-button:hover{
+	background-image:url('../images/help-over.png');
+}
+/*register page*/
+#register{
+	width: 300px;
+	margin: auto;
+}
+#button-register-play{
+	border:4px outset #2EB82E;
+	background-color:#2EB82E;
+	display: inline-block;
+	font-size:30px;
+	width: 100px;
+}
+#button-register-play:hover{
+	border:4px outset #29A329;
+	background-color:#29A329;
+}
+/*error page*/
+#error{
+	color:#CC0000;
+	position: relative;
+	font-size: 150%;
+}
+#clickBlocker{
+	background-color: rgba(0, 0, 0, 0.50);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+/*game page*/
+
+
+.goButton{
+	border:2px solid pink;
+}
+.gameTitle{
+	border:2px solid pink;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:500px;
+	text-align:center;
+}
+#theGame{
+	display:inline-block;
+}
+#theGameMenu{
+	display:inline-block;
+}
+#game-container{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:1280px;
+}
+#small-title{
+	height: 80px;
+}
+.advertisment{
+	width: 820px;
+	display:inline-block;
+	vertical-align: text-bottom;
+}
+#donateButton{
+	display:inline-block;
+	vertical-align: text-bottom;
+}
+.outer-float-container{
+	position: absolute; 
+	left: 50%; 
+	top:300px;
+	z-index:3;
+}
+.inner-float-container{
+	position: relative;
+	left: -50%;
+	border: solid black 2px;
+	padding: 10px;
+	width: 500px;
+	text-align:center;
+	display: none;
+}
+#button-close{
+	background-color:transparent;
+	border: none;
+	height: 10px;
+	line-height:10px;
+	font-size:14px;
+	color:#0099FF;
+}
+#button-close:hover{
+	color:#007ACC;
+}
+#button-close:active{
+	color:#0062A3;
+}
+#button-log-out{
+	margin:0px;
+}
+.button-temp{
+	margin:0px;
+}

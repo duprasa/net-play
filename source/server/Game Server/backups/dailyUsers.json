@@ -1,0 +1,12 @@
+{
+	"ChocoMilkPlz": {
+		"nickname": "ChocoMilkPlz",
+		"isGuest": false,
+		"lastIp": "127.0.0.1",
+		"socket": null,
+		"loggedIn": false,
+		"password": "longpassword",
+		"email": "chocomilkplz@gmail.com",
+		"invalidAttempts": {}
+	}
+}
