@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<script src="/client/scripts/jquery-2.1.0.js"></script>
+</head>
+<body>
+	<div>
+	this is the directory page for: {{directory}}
+	</div>
+	<div class="files">
+		{% for file in files -%}
+		<div class="file">
+			<a href="{{file.full}}"> {{file.short}}</a>
+		</div>
+		{%- endfor %}
+	</div>
+	<script>
+		var files = $('.file');
+		var file_container = $('.files');
+		if(files.length === 0){
+			file_container.text('NO FILES HERE')
+		}
+	</script>
+</body>
+</html>
