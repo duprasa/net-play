@@ -9,7 +9,7 @@
 //Imports
 var http        = require('http');
 var settings    = require('./server/settings').httpServer;
-var httpHandler = require('./server/HTTP Server/http-handler');
+var httpHandler = require('./server/http server/http-handler');
 var log         = require('./server/utility/logger').makeInstance("Http Server");
 
 
@@ -25,7 +25,7 @@ function start(){
 	HttpServer.listen(settings.port);
 
 	log.info('Starting on port ' + settings.port);
-	
+
 
 	//start http handler
 	httpHandler.init();

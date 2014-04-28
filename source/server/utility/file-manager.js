@@ -24,30 +24,44 @@ var cachedLog = {};
 var loggingFiles = false;
 
 //create a list of all the files in directory
-exports.getFileList = function(startDir){
+//***this function takes an arbitrary amount of arguments
+exports.getFilesAndDirectories = function(){
+	var dirList = {};
 	var fileList = [];
-	(function dive(dir) {
-		// Read the directory
-		var list = fs.readdirSync(dir);
+	for (var direct in arguments){
+		var direct = arguments[direct];
+		dirList[direct] = (function dive(dir) {
+			var files = []
+			// Read the directory
+			var list = fs.readdirSync(dir);
 
-		// For every file in the list
-		list.forEach(function (file) {
-			// Full path of that file
-			var path = dir + "/" + file;
+			// For every file in the list
+			list.forEach(function (file) {
+				// Full path of that file
+				var path = dir + "/" + file;
 
-			// Get the file's stats
-			var stat = fs.statSync(path);
+				// Get the file's stats
+				var stat = fs.statSync(path);
 
-			// If the file is a directory
-			if (stat && stat.isDirectory()){
-				dive(path);
-			}else{
-				//substrings to directory given
-				fileList.push(path.replace(rootDir + startDir,''));
-			}
-		});
-	})(rootDir + startDir);
-	return fileList;
+				// If the file is a directory
+				if (stat && stat.isDirectory()){
+					fileList.push(path.replace(rootDir,''));
+					files.push(path.replace(rootDir,''));
+					//construct directory tree
+					var localFiles = dive(path);
+					dirList[path.replace(rootDir,'')] = localFiles;
+				}else{
+					//substrings to directory given
+					files.push(path.replace(rootDir,''));
+					fileList.push(path.replace(rootDir,''));
+				}
+			});
+			return files;
+		})(rootDir + direct);
+		fileList.push(direct);
+	}
+	console.log({files:fileList,directories:dirList});
+	return {files:fileList,directories:dirList};
 };
 
 //runs a function for every file

@@ -7,8 +7,8 @@
 
 
 //Imports
-var ioHandler   = require('./IO Server/IOHandler');
-var gameHandler = require('./Game Server/GameHandler');
+var ioHandler   = require('./socketIO server/socketIO-handler');
+//var gameHandler = require('./Game Server/GameHandler');
 var log         = require('./Utility/Logger').makeInstance("Server");
 
 
@@ -18,12 +18,12 @@ log.level   = 3;
 
 
 exports.start = function(){
-	
+
 	//start the io handler
 	ioHandler.init();
 	ioHandler.start();
 
 	//start the game handler
-	gameHandler.init();
-	gameHandler.start();
+	//gameHandler.init();
+	//gameHandler.start();
 };
